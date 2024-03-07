@@ -23,6 +23,11 @@ public class Carro {
         int capacidadeLivre = tanque.getCapacidade() - tanque.getCombustivelDisponivel();
         if (capacidadeLivre < quantidade) {
             tanque.abastece(tipoCombustivel, capacidadeLivre);
+            if (tipoCombustivel == TipoCombustivel.ALCOOL) {
+
+            } else if () {
+                
+            }
             return capacidadeLivre;
         } else {
             tanque.abastece(tipoCombustivel, quantidade);
