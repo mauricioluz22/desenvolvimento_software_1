@@ -21,18 +21,23 @@ public class Carro {
     // Retorna a quantidade efetivamente abastecida
     public int abastece(TipoCombustivel tipoCombustivel, int quantidade) {
         int capacidadeLivre = tanque.getCapacidade() - tanque.getCombustivelDisponivel();
+        int valorRetorno = -1;
         if (capacidadeLivre < quantidade) {
-            tanque.abastece(tipoCombustivel, capacidadeLivre);
-            if (tipoCombustivel == TipoCombustivel.ALCOOL) {
-
-            } else if () {
-                
-            }
-            return capacidadeLivre;
+            tanque.abasr u tece(tipoCombustivel, capacidadeLivre);
+            valorRetorno = capacidadeLivre;
         } else {
             tanque.abastece(tipoCombustivel, quantidade);
-            return quantidade;
+            valorRetorno = quantidade;
         }
+
+        if (valorRetorno > 0 && motor.getTipoMotor() == TipoCombustivel.FLEX) {
+            if (tipoCombustivel == TipoCombustivel.ALCOOL) {
+                motor.setConsumo(6);
+            } else if (tipoCombustivel == TipoCombustivel.GASOLINA) {
+                motor.setConsumo(8);
+            }
+        }
+        return valorRetorno;
     }
 
     // Retorna a distancia que consegue viajar com o combustivel remanescente
