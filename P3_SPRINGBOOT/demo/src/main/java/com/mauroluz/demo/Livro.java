@@ -2,19 +2,19 @@ package com.mauroluz.demo;
 import java.util.Objects;
 
 public class Livro {
-    private int id;
+    private long id;
     private String titulo;
     private String autor;
     private int ano;
 
-    public Livro(int id, String titulo, String autor, int ano) {
+    public Livro(long id, String titulo, String autor, int ano) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.ano = ano;
     }
 
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 
